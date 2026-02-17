@@ -1,0 +1,49 @@
+<html manifest="Abo_Fahad.cache">
+<head>
+<title>مكـتب محــسن</title>
+<style>
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background-image: url('icon0.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #222222;
+
+    overflow: hidden;
+}
+
+.info {
+    font-size: 22px;
+    color: #FFD700;
+    text-shadow: 0 0 10px rgba(255,215,0,0.7);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+</style>
+<script>
+history.replaceState(null,null,'index.html');var histlength=history.length;history.go(-histlength);
+function DLProgress(e){Percent=(Math.round(e.loaded / e.total * 100));msgs.innerHTML="Installing Offline Cache ... " + Percent + "%"};
+function DisplayCacheProgress(){
+setTimeout(function(){msgs.innerHTML="Cache Installed Successfully";},2000);
+setTimeout(function(){location.reload();},3000);
+}
+window.applicationCache.addEventListener("progress",DLProgress,false);window.applicationCache.oncached=function(e){DisplayCacheProgress();};window.applicationCache.onupdateready=function(e){DisplayCacheProgress();};
+</script>
+</head>
+<body style=overflow:hidden>
+<div id=msgs class=info style='-webkit-font-feature-settings:"tnum";font-feature-settings:"tnum";'></div>
+</body>
+</html>
